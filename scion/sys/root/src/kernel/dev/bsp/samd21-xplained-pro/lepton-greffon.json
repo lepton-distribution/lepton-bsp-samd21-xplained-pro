@@ -1,0 +1,31 @@
+{
+  "nom": "samd21-xplained-pro",
+  "type": "bsp",
+  "version": "1.0.0",
+  "description": "Carte SAMD21 Xplained Pro (ATSAMD21J18A, Cortex-M0+ r0p1, 256 Ko / 32 Ko) : DFLL 48 MHz sur quartz 32,768 kHz ; SERCOM3 en USART console ttys3 (EDBG) ; sans réseau.",
+  "destination": "kernel/dev/bsp/samd21-xplained-pro",
+  "bibliotheque": "bsp",
+  "famille": "samd21",
+  "coeur": "cortex-m0plus",
+  "mcu": "ATSAMD21J18A",
+  "frequence_cpu": 48000000,
+  "entete_config_noyau": "include/user_kernel_mkconf.h",
+  "script_liens": "ld/mem_samd21-xplained-pro.ld",
+  "demarrage": [
+    "samd21_xplained_pro_board.c"
+  ],
+  "openocd": [
+    "debug/openocd-samd21-xplained-pro.cfg"
+  ],
+  "sonde": "cmsis-dap",
+  "compilation": {
+    "publique": {
+      "definitions": [
+        "__SAMD21J18A__"
+      ],
+      "inclusions": [
+        "kernel/dev/bsp/samd21-xplained-pro"
+      ]
+    }
+  }
+}

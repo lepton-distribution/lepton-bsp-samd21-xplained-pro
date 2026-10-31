@@ -1,6 +1,6 @@
 /*
  * Configuration applicative de la carte SAMD21 Xplained Pro (étape 6). Les axes (micro-noyau,
- * cœur, puce, nom uname) sont posés par CMake (cmake/kal, cmake/cpu, cmake/boards), pas ici.
+ * cœur, puce, nom uname) sont posés par CMake (cmake/kal, cmake/cpu, BSP samd21-xplained-pro), pas ici.
  * 32 Ko de RAM, sans réseau (décision 2026-10-05) : profil minimal du noyau (un tube de 32
  * octets), rootfs réduit comme l'était celui de la SAMD20 (rootfscore.h), tampons stdio réduits.
  */
@@ -27,6 +27,6 @@
 #define __KERNEL_DEV_TTY "/dev/ttys3"
 
 //configuration de la carte (fréquences, priorités)
-#include "kernel/dev/bsp/samd21_xplained_pro/samd21_xplained_pro.h"
+#include "kernel/dev/bsp/samd21-xplained-pro/samd21_xplained_pro.h"
 
 #endif

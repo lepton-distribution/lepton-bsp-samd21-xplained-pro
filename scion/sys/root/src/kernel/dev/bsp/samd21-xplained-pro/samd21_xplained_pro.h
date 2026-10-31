@@ -2,7 +2,7 @@
  * Lepton — BSP de la carte SAMD21 Xplained Pro (ATSAMD21J18A, Cortex-M0+ r0p1, étape 6).
  * Licence : voir LICENSE (MPL 1.1).
  *
- * Seul endroit (avec cmake/boards et ld/mem_samd21-xplained-pro.ld) où figurent fréquences et
+ * Seul endroit (avec lepton-greffon.json et ld/mem_samd21-xplained-pro.ld) où figurent fréquences et
  * réglages de la carte. Références : fiche technique SAMD21 (SYSCTRL, GCLK, NVMCTRL, SERCOM),
  * en-tête de carte ASF samd21_xplained_pro.h (quartz 32,768 kHz, console EDBG). Inclus par
  * user_kernel_mkconf.h : aucun en-tête Microchip ici (inclus par kernelconf.h dans tout le noyau).

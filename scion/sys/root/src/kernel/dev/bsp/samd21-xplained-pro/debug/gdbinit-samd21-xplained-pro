@@ -1,7 +1,8 @@
-# gdb-multiarch — SAMD21 Xplained Pro (étape 6). Procédure : doc/migration/debug-gcc.md.
-#   terminal 1 : openocd -f debug/openocd-samd21-xplained-pro.cfg
-#   terminal 2 : gdb-multiarch -x debug/gdbinit-samd21-xplained-pro $LEPTON_BUILD/samd21-xplained-pro-embos/lepton.elf
-# Commandes Cortex-M communes (lepton-load, lepton-stacks) : debug/gdbinit-lepton. lepton-fault y
+# gdb-multiarch — SAMD21 Xplained Pro (BSP samd21-xplained-pro ; étape 6, ENV-19). Procédure : doc/migration/debug-gcc.md.
+# Depuis la racine du trunk :
+#   terminal 1 : openocd -f sys/root/src/kernel/dev/bsp/samd21-xplained-pro/debug/openocd-samd21-xplained-pro.cfg
+#   terminal 2 : gdb-multiarch -x sys/root/src/kernel/dev/bsp/samd21-xplained-pro/debug/gdbinit-samd21-xplained-pro $LEPTON_BUILD/samd21-xplained-pro-embos/lepton.elf
+# Commandes Cortex-M communes (lepton-load, lepton-stacks) : debug/gdbinit-lepton du noyau. lepton-fault y
 # lit les registres de faute ARMv7-M, absents en ARMv6-M : utiliser lepton-fault-v6m. État des
 # horloges : samd21_xplained_pro_clock_error (0 : correct).
 source debug/gdbinit-lepton
