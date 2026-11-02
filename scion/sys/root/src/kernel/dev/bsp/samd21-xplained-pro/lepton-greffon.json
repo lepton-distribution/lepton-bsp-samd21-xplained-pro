@@ -18,6 +18,9 @@
     "debug/openocd-samd21-xplained-pro.cfg"
   ],
   "sonde": "cmsis-dap",
+  "svd": {
+    "famille": "svd/ATSAMD21J18A.svd"
+  },
   "compilation": {
     "publique": {
       "definitions": [
